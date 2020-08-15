@@ -1,0 +1,221 @@
+.result{
+	box-sizing: border-box;
+	grid-row: 2/-1;
+	grid-column: 2/-1;
+  	width: 100%;
+  	height: 100%;
+  	display: flex;
+  	flex-direction: row;
+
+}
+
+.artist_bio{
+	height: 100%;
+	width: 50%;
+  	display: flex;
+  	flex-direction: column;
+	border-right: .2px solid black;
+}
+
+.bio{
+	margin: 10px;
+	box-sizing: border-box;
+	border: .2px solid black;
+	padding: 5px 10px;
+	width: 70%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	line-height: 30px;
+	align-items: center;
+	align-self: center;
+	margin-bottom: 20px;
+}
+
+.artist_img{
+	width: 80px;
+	height: 80px;
+	margin-right: 50px;
+}
+
+.artist_info{
+	font-size: 18px;
+}
+
+
+.albums_overview{
+ 	width: 100%;
+ 	display: flex;
+ 	flex-direction: column;
+ 	margin-bottom: 20px;
+}
+
+.albums_notation{
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.albums{
+	box-sizing: border-box;
+	width: 70%;
+	border: .2px solid black;
+	border-bottom: none;
+	margin: 10px 0;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+
+.album:hover{
+	cursor: pointer;
+}
+
+.album_name{
+	font-size: 14px;
+}
+
+
+.tracks_overview{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.tracks_notation{
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+
+.tracks{
+	align-self: center;
+	width: 70%;
+	border: .2px solid black;
+	border-bottom: none;
+	margin: 10px 0 10px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.track,
+.album{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.track:not(last-child),
+.album:not(last-child){
+	border-bottom: 1px solid black;
+}
+
+.track_img,
+.album_img{
+	height: 35px;
+	width: 35px;
+	margin-right: 20px;
+	margin-left: 10px;
+}
+
+.track_name{
+	font-size: 16px;
+}
+
+
+
+.album_overview{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.fetched_album{
+	width: 90%;
+	height: 140px;
+	margin-top: 10px;
+	font-size: 18px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.fetched_album_img{
+	width: 80px;
+	height: 80px; 
+	margin: 0 30px 0 20px;
+}
+
+.fetched_album_name{
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.fetched_tracks{
+	align-self: center;
+	margin-top: 30px;
+	margin-left: 20px;
+	border: .2px solid black;
+	width: 80%;
+	margin-bottom: 50px;
+}
+
+.fetched_track{
+	height: 30px;
+	border-bottom: .2px solid black;
+}
+
+.track_number{
+	width: 10%;
+}
+
+.track_name{
+	width: 90%;
+	/*margin-left: 30px;*/
+	line-height: 30px;
+}
+
+
+@media only screen and (max-width: 1100px){
+	.artist_img{ margin-right: 20px; width: 50px; height: 50px; }
+	.artist_info{ font-size: 14px; }
+	.album_name, .track_name{ font-size: 14px;}
+	.fetched_album_name{font-size: 14px;}
+}
+
+@media only screen and (max-width: 870px){
+	.artist_img{ margin-right: 20px; width: 50px; height: 50px; }
+	.artist_info{ font-size: 12px; }
+	.album_name, .track_name{ font-size: 12px;}
+	.fetched_album_name{font-size: 12px;}
+	.track_img, .album_img{ width: 30px; height: 30px; margin-right: 10px; margin-left: 5px;}
+}
+
+@media only screen and (max-width: 768px){
+	.bio{ flex-direction: column; height: 120px; align-items: center; justify-content: center;}
+	.artist_info{ font-size: 12px; line-height: 17px;  }
+	.artist_img{width: 60px; height: 60px; margin: 10px 0 10px 0;}
+	.album_name, .track_name{ font-size: 11px;}
+	.albums_notation, .tracks_notation{ font-size: 17px; }
+	.fetched_album{ flex-direction: column; align-self: center; margin-bottom: 10px; }
+	.fetched_album_img{ width: 60px; height: 60px; margin-right: 20px; margin-bottom: 15px; }
+	.fetched_album_name{font-size: 12px;}
+	.fetched_tracks{ margin-top: 10px; }
+	.fetched_tracks_name{font-size: 12px;}
+}
+
+
+@media only screen and (max-width: 570px){
+	.result{ flex-direction: column; }
+	.bio{ height: 140px; }
+	.artist_info{ font-size: 14px; line-height: 20px; }
+	.artist_img{width: 50px; height: 50px; margin-right: 20px; margin-left: 20px;}
+	.artist_bio{ width: 100%; border-bottom: .2px solid black; }
+	.album_overview{ width: 100%; }
+	.fetched_album{ align-self: center; }
+	.track_name{font-size: 12px;}
+}
